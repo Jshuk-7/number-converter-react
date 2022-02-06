@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand';
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(75, 75, 75);
+  color: #f1356a;
+  min-height: 100vh;
+}
+
+.Header {
+  margin: 1rem;
+}
