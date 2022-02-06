@@ -1,13 +1,22 @@
 import { useState } from 'react';
-import convertNumber from '../helper/convertNumber';
+import convertNumberToBinary from '../helper/convertNumber';
 
 const Form = () => {
-  const [number, setNumber] = useState(null);
-  const [calculatedNumber, setCalculatedNumber] = useState(null);
+  const [number, setNumber] = useState('');
+  const [calculatedNumber, setCalculatedNumber] = useState('');
+  const submitHandler = e =>
+  {
+    e.preventDefault();
+  };
+  const clearInputs = () =>
+  {
+    setNumber('');
+    setCalculatedNumber('');
+  };
 
   return (
     <div className="Form">
-      <form>
+      <form onSubmit={submitHandler}>
         <label>Enter a Number</label>
         <input
           type="number"
@@ -16,12 +25,12 @@ const Form = () => {
           onChange={e => setNumber(e.target.value)}
         />
         <div className="controls-container">
-          <select>
+          <select required>
             <option value="">--Select an option--</option>
             <option value="Binary">Binary</option>
           </select>
-          <button onClick={() => convertNumber(number)}>Convert</button>
-          <button onClick={() => setNumber(null)}>Clear</button>
+          <button onClick={() => setCalculatedNumber(convertNumberToBinary(number))}>Convert</button>
+          <button onClick={clearInputs}>Clear</button><br/>
           <input type="number" readOnly value={calculatedNumber} />
         </div>
       </form>

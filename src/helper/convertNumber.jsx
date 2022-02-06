@@ -1,6 +1,7 @@
-const convertNumber = num => {
+const convertNumberToBinary = num => {
   const bit = 2;
-  let bit1,
+  let 
+    bit1,
     bitVal1,
     bitCalc1,
     bit2,
@@ -19,39 +20,35 @@ const convertNumber = num => {
     bitVal6,
     bitCalc6,
     bit7,
-    bitVal7,
     bitCalc7,
-    bit8,
-    bitVal8,
-    bitCalc8;
+    bit8;
 
   bit1 = num % bit;
   bitCalc1 = parseInt((bitVal1 = num / bit));
 
   bit2 = bitCalc1 % bit;
-  bitCalc2 = parseInt((bitVal2 = num / bit));
+  bitCalc2 = parseInt((bitVal2 = bitVal1 / bit));
 
   bit3 = bitCalc2 % bit;
-  bitCalc3 = parseInt((bitVal3 = num / bit));
+  bitCalc3 = parseInt((bitVal3 = bitVal2 / bit));
 
   bit4 = bitCalc3 % bit;
-  bitCalc4 = parseInt((bitVal4 = num / bit));
+  bitCalc4 = parseInt((bitVal4 = bitVal3 / bit));
 
   bit5 = bitCalc4 % bit;
-  bitCalc5 = parseInt((bitVal5 = num / bit));
+  bitCalc5 = parseInt((bitVal5 = bitVal4 / bit));
 
   bit6 = bitCalc5 % bit;
-  bitCalc6 = parseInt((bitVal6 = num / bit));
+  bitCalc6 = parseInt((bitVal6 = bitVal5 / bit));
 
   bit7 = bitCalc6 % bit;
-  bitCalc7 = parseInt((bitVal7 = num / bit));
+  bitCalc7 = parseInt((bitVal6 / bit));
 
   bit8 = bitCalc7 % bit;
-  bitCalc8 = parseInt((bitVal8 = num / bit));
 
-  const result = `${bit1}${bit2}${bit3}${bit4}${bit5}${bit6}${bit7}${bit8}`;
+  const result = `${bit8}${bit7}${bit6}${bit5}${bit4}${bit3}${bit2}${bit1}`;
 
   return result;
 };
 
-export default convertNumber;
+export default convertNumberToBinary;

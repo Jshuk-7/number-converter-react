@@ -9,11 +9,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(56, 56, 56);
   color: #f1356a;
   min-height: 100vh;
 }
 
 .Header {
   margin: 1rem;
+}
+
+.Form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form form input {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.Form form button {
+  background-color: #f1356a;
+  color: white;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+}
+
+.Form form select {
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
